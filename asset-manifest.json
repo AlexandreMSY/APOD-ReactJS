@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/APOD-ReactJS/static/css/main.a8fb8dc5.css",
-    "main.js": "/APOD-ReactJS/static/js/main.e873754f.js",
+    "main.js": "/APOD-ReactJS/static/js/main.f3b26eac.js",
     "static/js/787.28cb0dcd.chunk.js": "/APOD-ReactJS/static/js/787.28cb0dcd.chunk.js",
     "static/media/github.png": "/APOD-ReactJS/static/media/github.987334e9f782cc505f25.png",
     "static/media/logo.svg": "/APOD-ReactJS/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/APOD-ReactJS/index.html",
     "main.a8fb8dc5.css.map": "/APOD-ReactJS/static/css/main.a8fb8dc5.css.map",
-    "main.e873754f.js.map": "/APOD-ReactJS/static/js/main.e873754f.js.map",
+    "main.f3b26eac.js.map": "/APOD-ReactJS/static/js/main.f3b26eac.js.map",
     "787.28cb0dcd.chunk.js.map": "/APOD-ReactJS/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a8fb8dc5.css",
-    "static/js/main.e873754f.js"
+    "static/js/main.f3b26eac.js"
   ]
 }
