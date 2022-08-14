@@ -9,7 +9,7 @@ export default function VideoPlayer(props){
         <div className="ratio ratio-16x9" style={{width: '70%'}}>
             <iframe
             allow="autoplay; encrypted-media"
-            allowfullscreen 
+            allowFullScreen 
             src={props.url}/>
         </div>
     )
