@@ -19,7 +19,7 @@ export default class GetApod extends React.Component{
 
     fetchApi = async (date) => {
         var response = ''
-        if (date === 'nodata'){
+        if (date === undefined){
             response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
         }else{
             response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${date}&`)
@@ -33,7 +33,7 @@ export default class GetApod extends React.Component{
     }
 
     componentDidMount(){
-        this.fetchApi('nodata')  
+        this.fetchApi()  
     }
 
     componentDidUpdate(prevProps, prevState){
