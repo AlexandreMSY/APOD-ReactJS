@@ -17,23 +17,28 @@ export default class GetApod extends React.Component{
         this.setDate = this.setDate.bind(this)
     }
 
+    fetchApi = async (date) => {
+        var response = ''
+        if (date === 'nodata'){
+            response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
+        }else{
+            response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${date}&`)
+        }
+        const data = await response.json()
+
+        this.setState({
+            dataApi: data
+        })
+
+    }
+
     componentDidMount(){
-        fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}`)
-            .then(response => response.json())
-            .then(data => this.setState({dataApi: data}))
-            .catch((error) => {
-                console.error('Error ', error)
-            })       
+        this.fetchApi('nodata')  
     }
 
     componentDidUpdate(prevProps, prevState){
         if (prevState.date !== this.state.date){
-            fetch(`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_API_KEY}&date=${this.state.date}&`)
-                .then(response => response.json())
-                .then(data => this.setState({dataApi: data}))
-                .catch((error) => {
-                    console.error('Error: ', error)
-                }) 
+            this.fetchApi(this.state.date)
         }
         console.log(this.state.dataApi)  
     }
