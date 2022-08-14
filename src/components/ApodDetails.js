@@ -7,7 +7,7 @@ import VideoPlayer from "./VideoPlayer";
 
 export default function ApodDetails(props){
     return(
-        <div className="d-flex flex-column align-items-center bg-dark text-light p-3" style={{width: '90%'}}>
+        <div className="d-flex flex-column align-items-center bg-dark text-light p-3 border" style={{width: '90%'}}>
             <header className="m-2">
                 <h2>{props.title}</h2>
             </header>

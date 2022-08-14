@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#dateInput{
+  width: 100%;
+  text-align: center;
+  border: 1px solid white;
+  background-color: rgb(33,37,41);
+  color-scheme: dark;
+  transition: 1s;
+}
+
+#dateInput:hover{
+  background-color: whitesmoke;
+  color-scheme: white;
+  color: black;
+}
