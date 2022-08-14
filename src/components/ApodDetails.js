@@ -3,6 +3,7 @@ import { ReactDOM } from "react";
 import '../index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import VideoPlayer from "./VideoPlayer";
 
 export default function ApodDetails(props){
     return(
@@ -10,9 +11,11 @@ export default function ApodDetails(props){
             <header className="m-2">
                 <h2>{props.title}</h2>
             </header>
+            {props.mediaType === "image" ? 
             <a href={props.hdurl}>
                 <img src={props.src} className='border img-fluid'/>
-            </a>
+            </a> : 
+            <VideoPlayer url={props.videoUrl}/>} 
             <main className="m-2">
                 <article>
                     <p>{props.description}</p>
