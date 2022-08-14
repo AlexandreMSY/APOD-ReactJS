@@ -1,7 +1,6 @@
 import React from "react";
 import ApodDetails from "./ApodDetails";
 import { ReactDOM } from "react";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import '../index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,6 +10,7 @@ export default class GetApod extends React.Component{
     constructor(props){
         super(props)
         this.state = {
+            currentDate: new Date().toISOString().slice(0, 10),
             date: '',
             dataApi: {}
         }
@@ -48,16 +48,10 @@ export default class GetApod extends React.Component{
     render(){
         return(
             <div className="d-flex flex-column align-items-center justify-content-center">
-                <div style={{width: '90%'}}>
-                    <input
-                        id="dateInput"
-                        type='date'
-                        onChange={this.setDate}
-                        name='date'
-                    />
-                </div>
-                <div className="d-flex justify-content-center mt-1">
-                    <ApodDetails 
+                <div className="d-flex justify-content-center mt-1">                   
+                    <ApodDetails
+                    currentDate={this.state.currentDate}
+                    onchange={this.setDate}
                     title={this.state.dataApi.title}
                     mediaType={this.state.dataApi.media_type}
                     videoUrl={this.state.dataApi.url}

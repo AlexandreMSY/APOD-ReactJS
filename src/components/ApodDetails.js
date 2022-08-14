@@ -4,10 +4,14 @@ import '../index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import VideoPlayer from "./VideoPlayer";
+import DateButton from "./DateInput";
 
 export default function ApodDetails(props){
     return(
         <div className="d-flex flex-column align-items-center bg-dark text-light p-3 border" style={{width: '90%'}}>
+            <DateButton 
+            currentDate={props.currentDate}
+            onchange={props.onchange}/>
             <header className="m-2">
                 <h2>{props.title}</h2>
             </header>
