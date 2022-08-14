@@ -1,3 +1,11 @@
+# Astronomy Picture of The Day
+Webpage that shows the APOD from NASA's APOD APi.
+
+Made with React.JS
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
