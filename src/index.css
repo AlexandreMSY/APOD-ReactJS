@@ -13,6 +13,7 @@ code {
 }
 
 #dateInput{
+  padding: 2%;
   width: 100%;
   text-align: center;
   border: 1px solid white;
@@ -22,7 +23,8 @@ code {
 }
 
 #dateInput:hover{
-  background-color: whitesmoke;
-  color-scheme: black;
+  background-color: white;
+  border: 1px solid rgb(33,37,41);
   color: black;
+  color-scheme: black;
 }
