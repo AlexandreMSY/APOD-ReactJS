@@ -48,7 +48,7 @@ export default class GetApod extends React.Component{
     render(){
         return(
             <div className="d-flex flex-column align-items-center justify-content-center">
-                <div className="d-flex justify-content-center mt-1">                   
+                <div className="d-flex justify-content-center m-1">                   
                     <ApodDetails
                     currentDate={this.state.currentDate}
                     onchange={this.setDate}

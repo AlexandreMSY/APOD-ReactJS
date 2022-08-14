@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import VideoPlayer from "./VideoPlayer";
 import DateButton from "./DateInput";
+import './github.png'
 
 export default function ApodDetails(props){
     return(
@@ -25,9 +26,12 @@ export default function ApodDetails(props){
                     <p>{props.description}</p>
                 </article>
             </main>
-            <footer>
+            <footer className="text-center">
                 <p>{props.copyright}</p>
                 <p>{props.date}</p>
+                <a href='https://github.com/AlexandreMSY/APOD-ReactJS'>
+                    <img src={require('./github.png')} style={{width: '10%'}}/>
+                </a>
             </footer>
         </div>
     )
