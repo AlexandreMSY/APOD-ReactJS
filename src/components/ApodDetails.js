@@ -19,8 +19,7 @@ export default function ApodDetails(props){
             {props.mediaType === "image" ? 
             <a href={props.hdurl}>
                 <img src={props.src} className='border img-fluid'/>
-            </a> : 
-            <VideoPlayer url={props.videoUrl}/>} 
+            </a> : <div style={{width: '100%', height:'auto'}}><VideoPlayer url={props.videoUrl}/></div>}
             <main className="m-2">
                 <article>
                     <p>{props.description}</p>

@@ -6,7 +6,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 export default function VideoPlayer(props){
     return(
-        <div className="ratio ratio-16x9" style={{width: '70%'}}>
+        <div className="ratio ratio-16x9">
             <iframe
             allow="autoplay; encrypted-media"
             allowFullScreen 
