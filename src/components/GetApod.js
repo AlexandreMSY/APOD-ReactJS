@@ -1,6 +1,7 @@
 import React from "react";
 import ApodDetails from "./ApodDetails";
 import { ReactDOM } from "react";
+import getDatesInRange from "./dateGenerator";
 import "react-datepicker/dist/react-datepicker.css";
 import '../index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,6 +16,7 @@ export default class GetApod extends React.Component{
             dataApi: {}
         }
         this.setDate = this.setDate.bind(this)
+        this.dateGenerator = this.dateGenerator.bind(this)
     }
 
     fetchApi = async (date) => {
@@ -50,6 +52,19 @@ export default class GetApod extends React.Component{
         })
     }
 
+    dateGenerator(){
+        const startingDate = new Date("1995-05-01");
+        const currentDate = new Date();
+
+        let dates = getDatesInRange(startingDate, currentDate);
+        let randomNumber = Math.round(Math.random() * dates.length);
+        let randomDate = dates[randomNumber].toISOString().slice(0,10);
+
+        this.setState({
+            date: randomDate
+        })
+    }
+
     render(){
         return(
             <div className="container-sm d-flex flex-column align-items-center justify-content-center" >
@@ -57,6 +72,7 @@ export default class GetApod extends React.Component{
                     <ApodDetails
                     currentDate={this.state.currentDate}
                     onchange={this.setDate}
+                    generatorAction = {this.dateGenerator}
                     title={this.state.dataApi.title}
                     mediaType={this.state.dataApi.media_type}
                     videoUrl={this.state.dataApi.url}

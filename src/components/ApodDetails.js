@@ -20,7 +20,10 @@ export default function ApodDetails(props){
             <a href={props.hdurl}>
                 <img src={props.src} className='border img-fluid'/>
             </a> : <div style={{width: '100%', height:'auto'}}><VideoPlayer url={props.videoUrl}/></div>}
-            <main className="m-2">
+            <div className="m-2">
+                <button className="btn btn-warning" onClick={props.generatorAction}>Generate Random Image</button>
+            </div>
+            <main >
                 <article>
                     <p>{props.description}</p>
                 </article>
